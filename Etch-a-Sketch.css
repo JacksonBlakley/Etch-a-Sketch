@@ -1,0 +1,8 @@
+#container {
+    display: grid;
+    height: 960px;
+    width: 960px;
+    background: linear-gradient(35deg, #ffd89b, #19547b);
+
+
+}
