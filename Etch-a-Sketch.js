@@ -1,4 +1,4 @@
-var num_rows = 100;
+var num_rows = 16;
 var numGrid = num_rows * num_rows;
 
 
@@ -26,8 +26,8 @@ function drawGrid() {
 
 function listen() {
 
-    const allpix = document.querySelectorAll('.pixel');
-        allpix.forEach((div) => {
+            const allpix = document.querySelectorAll('.pixel');
+            allpix.forEach((div) => {
             div.addEventListener('mouseover', () => {
             div.style.background = 'red';
             });
@@ -35,8 +35,26 @@ function listen() {
 
 }
 
+function clear() {
+    const btn = document.querySelector('#clear');
+    btn.addEventListener('click', () => {
+        var new_rows = prompt("Enter how many columns you would like?", "100");
+        num_rows = new_rows;
+        numGrid = num_rows * num_rows;
+        const container = document.querySelector('#container');    
+        const allpix = document.querySelectorAll('.pixel');
+        allpix.forEach((div) => {
+        div.remove();
+        
+        });
+        drawGrid();
+        listen();
+    });
+}
+
 
 drawGrid();
 listen();
+clear();
 
 
