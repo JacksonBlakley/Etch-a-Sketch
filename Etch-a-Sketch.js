@@ -29,7 +29,7 @@ function listen() {
             const allpix = document.querySelectorAll('.pixel');
             allpix.forEach((div) => {
             div.addEventListener('mouseover', () => {
-            div.style.background = 'red';
+            div.style.background = 'black';
             });
         });
 
